@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursividad en Algoritmos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #98FB98;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        section {
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 1000px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        img {
+            max-width: 100%;
+        }
+        .algorithm {
+            background-color: #e7f5e7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <marquee bgcolor="PaleGreen"><font face = "Time new Roman" size = "9" color = "black">RECURSIVIDAD EN ALGORITMOS</marquee></font>
+        <p align="center"><Font face="Time new Roman" size="4" color = "black">Investigación y ejemplos prácticos</Font></p>
+    </header>
+
+    <nav>
+        <a href="#introduccion">Introducción</a>
+        <a href="#definicion">Definición</a>
+        <a href="#procedimientos">Procedimientos</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#complejidad">Complejidad</a>
+        <a href="#ejemplos">Ejemplos</a>
+        <a href="#conclusion">Conclusión</a>
+        <a href="#referencias">Referencias</a>
+        <a href="portada.html">Regresar a portada</a>
+    </nav>
+
+    <!-- Secciones -->
+    <section id="introduccion">
+        <h2>Introducción</h2>
+        <p align="justify"><Font face="Arial" size="2">La recursividad es una técnica fundamental en las ciencias computacionales que consiste en resolver un problema dividiéndolo en subproblemas más pequeños de la misma naturaleza. Un algoritmo recursivo se caracteriza porque una función o procedimiento se llama a sí mismo durante su ejecución, hasta alcanzar un caso base que detiene la repetición.
+        Su importancia radica en que permite construir soluciones elegantes y compactas para problemas que, de manera iterativa, podrían resultar más complejos. La recursividad se aplica en áreas como el cálculo matemático, la resolución de acertijos, la programación de estructuras de datosárboles, grafos y listas enlazadas el diseño de algoritmos de búsqueda y ordenamiento, y la generación de gráficos computacionales como fractales.
+        En esta página se presenta una investigación sobre la recursividad y sus características principales. Se explican los procedimientos recursivos, sus aplicaciones y la complejidad computacional asociada. Además, se incluyen ejemplos prácticos de algoritmos clásicos como el factorial, la sucesión de Fibonacci, las Torres de Hanói y los fractales, acompañados de representaciones visuales que ayudan a comprender mejor su funcionamiento. Finalmente, se ofrece una conclusión acerca de la relevancia de la recursividad en el ámbito de la informática y la programación.</Font></p>
+        <center> <IMG SRC="recursividad.png" width="220"ALIGN=TOP> </center>
+    </section>
+
+    <section id="definicion">
+        <h2>Definición de Recursividad</h2>
+        <p align="justify"><Font face="Arial" size="2">La recursividad es un método de programación y resolución de problemas en el cual una función, procedimiento o algoritmo se llama a sí mismo de manera directa o indirecta para resolver una tarea. Este enfoque permite descomponer un problema complejo en subproblemas más pequeños y manejables que siguen la misma estructura que el problema original.</Font></p>
+        <center> <IMG SRC="definicion.png" width="260"ALIGN=TOP> </center>
+    </section>
+
+    <section id="procedimientos">
+        <h2>Procedimientos Recursivos y Aplicaciones</h2>
+        <p align="justify"><Font face="Arial" size="2">Un procedimiento recursivo es aquel en el que una función o algoritmo realiza una llamada a sí mismo con el propósito de resolver una parte del problema original. Cada vez que la función se invoca, el problema se reduce a una versión más simple, y este proceso continúa hasta llegar al caso base, que actúa como condición de parada y evita que el ciclo se repita indefinidamente. De esta manera, la recursividad permite dividir un problema complejo en varios subproblemas de menor tamaño y con la misma estructura, logrando una solución final al combinar los resultados de todas las llamadas previas.
+
+        La recursividad se aplica en múltiples áreas de las ciencias computacionales y la matemática. En el ámbito del cálculo matemático, es útil para resolver operaciones como factoriales, potencias y series numéricas, incluyendo la famosa sucesión de Fibonacci. En estructuras de datos, resulta fundamental para recorrer árboles binarios, grafos y listas enlazadas, ya que estas estructuras tienen una naturaleza jerárquica que se adapta perfectamente al enfoque recursivo. También desempeña un papel central en algoritmos de ordenamiento y búsqueda, como QuickSort, MergeSort o Binary Search, los cuales aprovechan la división de los problemas en subconjuntos más pequeños.
+
+        Por otro lado, la recursividad se emplea en la resolución de problemas lógicos y puzzles, como las Torres de Hanói o el diseño de algoritmos para explorar laberintos, donde el mismo procedimiento puede repetirse en cada paso hasta encontrar una solución. Asimismo, en el campo de la computación gráfica y la geometría, se utiliza para generar fractales y modelar estructuras naturales como árboles, montañas o patrones repetitivos que, debido a su carácter autosimilar, se describen de manera eficiente mediante funciones recursivas.</Font></p>
+        <center> <IMG SRC="recur.png" width="260"ALIGN=TOP> </center>
+    </section>
+
+    <section id="caracteristicas">
+        <h2>Características de la Recursividad</h2>
+        <ul>
+            <li><p align="justify"><Font face="Arial" size="2">Autollamado de funciones: una función se llama a sí misma para resolver subproblemas más pequeños del mismo problema.</li></Font></p>
+            <li><p align="justify"><Font face="Arial" size="2">Caso base: existe una condición de parada que detiene la recursión y evita ciclos infinitos.</li></Font></p>
+            <li><p align="justify"><Font face="Arial" size="2">División de problemas: descompone un problema complejo en subproblemas más simples y de igual estructura.</li></Font></p>
+            <li><p align="justify"><Font face="Arial" size="2">Uso de la pila de llamadas: cada invocación se almacena en la pila del sistema, lo que permite retomar la ejecución al resolverse los niveles más profundos.</li></Font></p>
+            <li><p align="justify"><Font face="Arial" size="2">Claridad y elegancia: los algoritmos recursivos suelen ser más fáciles de leer y expresar que sus equivalentes iterativos.</li></Font></p>
+            <li><p align="justify"><Font face="Arial" size="2">Costo computacional: pueden consumir más memoria y tiempo que los algoritmos iterativos, debido a la creación de múltiples llamadas.</li></Font></p>
+            <li><p align="justify"><Font face="Arial" size="2">Optimización posible: técnicas como la recursividad de cola y la memoización permiten mejorar el rendimiento y reducir cálculos repetitivos.</li></Font></p>
+            <li><p align="justify"><Font face="Arial" size="2">Autosimilitud: los pasos del procedimiento recursivo mantienen la misma estructura que el problema original.</li></Font></p>
+            <center> <IMG SRC="carac.png" width="220"ALIGN=TOP> </center>
+        </ul>
+    </section>
+
+    <section id="complejidad">
+        <h2>Complejidad Computacional</h2>
+        <p align="justify"><Font face="Arial" size="2">La complejidad computacional de un algoritmo recursivo se mide analizando el número de operaciones que realiza en función del tamaño de la entrada. Para lograrlo, se utiliza principalmente la técnica de ecuaciones de recurrencia, que describe cómo el problema original se divide en subproblemas más pequeños y cuánto trabajo adicional se realiza en cada paso. Una ecuación de recurrencia expresa el tiempo de ejecución como una relación que depende del tamaño de la entrada y de las llamadas recursivas.
+
+        Por ejemplo, en un algoritmo como el factorial, donde la función se llama una sola vez en cada paso hasta llegar al caso base, la recurrencia es T(n) = T(n-1) + O(1), lo que se traduce en una complejidad de O(n). En cambio, en la sucesión de Fibonacci, cada llamada genera dos nuevas llamadas, lo que da lugar a la recurrencia T(n) = T(n-1) + T(n-2) + O(1), con una complejidad exponencial de O(2^n) si no se optimiza.
+
+        Para algoritmos más avanzados, como MergeSort, la recurrencia se expresa como T(n) = 2T(n/2) + O(n), ya que el problema se divide en dos mitades y, además, se realiza un trabajo lineal al combinar los resultados. Resolviendo esta recurrencia con el método maestro se obtiene que la complejidad es O(n log n).
+
+        En conclusión, medir la complejidad de un algoritmo recursivo implica identificar su caso base, determinar cómo se divide el problema en cada paso y analizar el costo adicional de las operaciones externas a las llamadas recursivas. Con estas herramientas, es posible predecir si un algoritmo será eficiente o si requerirá optimización.</Font></p>
+        <center> <IMG SRC="comple.png" width="220"ALIGN=TOP> </center>
+    </section>
+
+    <section id="ejemplos">
+        <h2>Ejemplos de Algoritmos Recursivos</h2>
+
+        <!-- Factorial -->
+        <div class="algorithm">
+            <h3>Factorial</h3>
+            <p>Explicación del factorial y su algoritmo recursivo:</p>
+            <pre>
+function factorial(n) {
+    if (n == 0) return 1;
+    return n * factorial(n-1);
+}
+            </pre>
+            <p>Ejemplo visual:</p>
+            <ul id="factorialTree"></ul>
+            <script>
+                function factorialTree(n){
+                    if(n===0) return [1];
+                    let res = factorialTree(n-1);
+                    res.push(n * res[res.length-1]);
+                    return res;
+                }
+                const tree = factorialTree(5);
+                document.getElementById("factorialTree").innerHTML = tree.join(" → ");
+            </script>
+        </div>
+
+        <!-- Fibonacci -->
+        <div class="algorithm">
+            <h3>Fibonacci</h3>
+            <p>Explicación del algoritmo recursivo de Fibonacci:</p>
+            <pre>
+function fibonacci(n) {
+    if(n <= 1) return n;
+    return fibonacci(n-1) + fibonacci(n-2);
+}
+            </pre>
+        </div>
+
+        <!-- Torres de Hanói -->
+        <div class="algorithm">
+            <h3>Torres de Hanói</h3>
+            <p>Explicación del problema y algoritmo recursivo:</p>
+            <pre>
+function hanoi(n, from, to, aux){
+    if(n==1){
+        console.log("Mover disco 1 de " + from + " a " + to);
+        return;
+    }
+    hanoi(n-1, from, aux, to);
+    console.log("Mover disco " + n + " de " + from + " a " + to);
+    hanoi(n-1, aux, to, from);
+}
+            </pre>
+        </div>
+
+        <!-- Fractales -->
+        <div class="algorithm">
+            <h3>Fractales</h3>
+            <p>Curva de Kotch:</p>
+             <center> <IMG SRC="kotch.png" width="260"ALIGN=TOP> </center>
+        </div>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusión</h2>
+        <p align="justify"><Font face="Arial" size="2">La recursividad es una herramienta fundamental en ciencias computacionales, ya que permite resolver problemas complejos de manera clara y estructurada mediante la descomposición de una tarea en subproblemas más pequeños y manejables. Su importancia radica en que simplifica la programación de algoritmos que, de otro modo, serían difíciles de implementar de forma iterativa, como estructuras de datos jerárquicas (árboles, grafos) o problemas matemáticos clásicos (factoriales, sucesión de Fibonacci, fractales). Además, la recursividad fomenta un pensamiento lógico y analítico en los programadores, promoviendo soluciones elegantes y eficientes cuando se utiliza correctamente. Sin embargo, también requiere cuidado en la gestión de recursos y la prevención de llamadas infinitas, ya que un mal uso puede afectar el rendimiento del sistema. En conclusión, la recursividad no solo es un recurso técnico valioso, sino también un pilar conceptual en el desarrollo de algoritmos y en la comprensión profunda de la resolución de problemas en ciencias de la computación.</Font></p>
+        <center> <IMG SRC="conclu.jpg" width="220"ALIGN=TOP> </center>
+    </section>
+
+    <section id="referencias">
+        <h2>Referencias IEEE</h2>
+        <ol>
+            <li>. H. Cormen, C. E. Leiserson, R. L. Rivest y C. Stein, Introduction to Algorithms, 3ra ed., MIT Press, 2009. Disponible en: https://www.cs.mcgill.ca/~akroit/math/compsci/Cormen%20Introduction%20to%20Algorithms.pdf</li><br>
+
+            <li>J. McCarthy, “Recursive Functions of Symbolic Expressions and Their Computation by Machine,” Commun. ACM, vol. 3, no. 4, pp. 184–195, 1960. Disponible en: https://www-formal.stanford.edu/jmc/recursive.pdf</li><br>
+
+            <li>D. E. Knuth, The Art of Computer Programming, Volume 1: Fundamental Algorithms, 3ra ed., Addison-Wesley, 1997. Disponible en: https://f.javier.io/rep/books/Donald-Knuth---The-Art-of-Computer-Programming-Vol-1-Fundamental-Algorithms.pdf</li><br>
+
+            <li>M. Gardner, “Mathematical Games: The Fantastic Combinations of John Conway’s New Solitaire Game ‘Life’,” Scientific American, vol. 223, no. 4, pp. 120–123, 1970. Disponible en: https://www.dbs.ifi.lmu.de/Lehre/Programmierpraktikum/WS0708/material/MathematicalGames.pdf</li><br>
+
+            <li>H. Sagan, Space-Filling Curves, Springer-Verlag, 1994. Disponible en: https://dokumen.pub/space-filling-curves-universitext-9780387942650-9781461208716-0387942653.html</li><br>
+
+            <li>R. Sedgewick y K. Wayne, Algorithms, 4ta ed., Addison-Wesley, 2011. Disponible en: https://algs4.cs.princeton.edu/</li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>Equipo: Rodrigo Nieves, Daniel Gonzales</p>
+    </footer>
+</body>
+</html>
